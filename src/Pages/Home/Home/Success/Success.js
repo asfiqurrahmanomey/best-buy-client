@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Success = () => {
     return (
         <div>
-            <section class="py-10 sm:py-16 lg:py-24">
+            <section class="py-10 sm:py-16 lg:py-24 ">
                 <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div class="text-center">
                         <h4 class="text-6xl font-bold text-gray-600" data-aos="zoom-in" data-aos-duration="3000">Numbers tell the hard works <br /> we’ve done in last 6 years</h4>
@@ -75,6 +75,7 @@ const Success = () => {
                     </div>
                 </div>
             </section>
+
             <section class="py-10 sm:py-16 lg:py-24">
                 <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div class="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-16 xl:gap-x-24">
