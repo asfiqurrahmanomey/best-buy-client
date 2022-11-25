@@ -24,7 +24,7 @@ const Navbar = () => {
         </li>
         <li>
             <Link
-                to={'/'}
+                to={'/products'}
                 aria-label="Our product"
                 title="Our product"
                 className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
@@ -55,7 +55,7 @@ const Navbar = () => {
     </React.Fragment>
 
     return (
-        <div className=''>
+        <div className='bg-gray-50'>
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
                     <motion.div >

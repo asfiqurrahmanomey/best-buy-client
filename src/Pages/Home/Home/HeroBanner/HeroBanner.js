@@ -14,7 +14,7 @@ const HeroBanner = () => {
                                 <h1 className="mt-4 text-4xl font-bold text-black lg:mt-8 sm:text-6xl xl:text-8xl">"Unbeatable price, and it’s super comfortable" </h1>
                                 <p className="mt-4 text-base text-black lg:mt-8 sm:text-xl">Explore and Find Right One</p>
 
-                                <Link to={'/'} title="" className="animate-bounce inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full lg:mt-16 hover:bg-gray-700 focus:bg-gray-700" role="button">
+                                <Link to={'/products'} title="" className="animate-bounce inline-flex items-center px-6 py-4 mt-8 font-semibold text-white transition-all duration-200 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full lg:mt-16 hover:bg-gray-700 focus:bg-gray-700" role="button">
                                     Products
                                     <svg className="w-6 h-6 ml-8 -mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
