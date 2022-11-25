@@ -7,7 +7,10 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+}
+
+.scroll-to-top svg{
+  margin: 0 auto;
 }
 
 code {

@@ -11,6 +11,7 @@ function App() {
       <RouterProvider router={router}>
 
       </RouterProvider>
+
       <Toaster />
     </div>
   );
