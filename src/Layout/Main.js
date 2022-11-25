@@ -7,7 +7,7 @@ import ScrollToTop from "react-scroll-to-top";
 const Main = () => {
 
     return (
-        <div>
+        <div className='overflow-x-hidden'>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <ScrollToTop smooth />

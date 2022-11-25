@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion"
 
 const Success = () => {
     return (
@@ -14,7 +15,7 @@ const Success = () => {
                         data-aos-duration="3000">
                         <div className="overflow-hidden bg-gradient-to-r from-pink-500 to-yellow-500 border  rounded-lg shadow-lg">
                             <div className="px-4 py-6">
-                                <div className="flex items-start">
+                                <div  className="flex items-start">
                                     <svg className="flex-shrink-0 w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                     </svg>

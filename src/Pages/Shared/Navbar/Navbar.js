@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../../assets/logo/logo.png'
-
+import { motion } from "framer-motion"
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // Animation for
+    const variants = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+    }
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     // *  Menuitems * //
     const navItems = <React.Fragment>
         <li>
@@ -53,20 +58,24 @@ const Navbar = () => {
         <div className=''>
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
-                    <Link
-                        to={'/'}
-                        aria-label="Company"
-                        title="Company"
-                        className="inline-flex items-center" data-aos="flip-right" data-aos-duration="3000"
-                    >
-                        <img src={Logo} alt="" />
-                        <span className="ml-2 text-xl font-bold tracking-wide  text-orange-400">
-                            Best Buy
-                        </span>
-                    </Link>
-                    <ul className="flex items-center hidden space-x-8 lg:flex" data-aos="flip-left" data-aos-duration="3000">
-                        {navItems}
-                    </ul>
+                    <motion.div >
+                        <Link
+                            to={'/'}
+                            aria-label="Company"
+                            title="Company"
+                            className="inline-flex items-center"
+                        >
+                            <img src={Logo} alt="" />
+                            <span className="ml-2 text-xl font-bold tracking-wide  text-orange-400">
+                                Best Buy
+                            </span>
+                        </Link>
+                    </motion.div>
+                    <motion.div >
+                        <ul className="flex items-center hidden space-x-8 lg:flex">
+                            {navItems}
+                        </ul>
+                    </motion.div>
 
                     <div className="lg:hidden">
                         <button
@@ -107,7 +116,7 @@ const Navbar = () => {
                                                 </span>
                                             </Link>
                                         </div>
-                                        <div>
+                                        <div >
                                             <button
                                                 aria-label="Close Menu"
                                                 title="Close Menu"
