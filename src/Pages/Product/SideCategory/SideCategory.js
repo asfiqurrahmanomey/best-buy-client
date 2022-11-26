@@ -10,7 +10,9 @@ const SideCategory = () => {
             .then(data => setCategories(data));
     }, [])
     return (
-        <div className='mx-auto'>
+        <div className='mx-auto' data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
             <div className='flex grid-rows-4 grid-flow-col gap-4'>
                 {
                     categories.map(category => <p key={category.id} className="btn btn-ghost">

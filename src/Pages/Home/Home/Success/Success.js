@@ -13,7 +13,7 @@ const Success = () => {
 
                     <div className="grid grid-cols-1 gap-6 px-6 mt-8 sm:px-0 lg:mt-16 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-12" data-aos="fade-up"
                         data-aos-duration="3000">
-                        <div className="overflow-hidden bg-gradient-to-r from-pink-500 to-yellow-500 border  rounded-lg shadow-lg">
+                        <div className="overflow-hidden bg-orange-600 border  rounded-lg shadow-lg">
                             <div className="px-4 py-6">
                                 <div  className="flex items-start">
                                     <svg className="flex-shrink-0 w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -27,7 +27,7 @@ const Success = () => {
                             </div>
                         </div>
 
-                        <div className="overflow-hidden bg-gradient-to-r from-pink-500 to-yellow-500 border rounded-lg shadow-lg">
+                        <div className="overflow-hidden bg-orange-600 border rounded-lg shadow-lg">
                             <div className="px-4 py-6">
                                 <div className="flex items-start">
                                     <svg className="flex-shrink-0 w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -41,7 +41,7 @@ const Success = () => {
                             </div>
                         </div>
 
-                        <div className="overflow-hidden bg-gradient-to-r from-pink-500 to-yellow-500 border  rounded-lg shadow-lg">
+                        <div className="overflow-hidden bg-orange-600 border  rounded-lg shadow-lg">
                             <div className="px-4 py-6">
                                 <div className="flex items-start">
                                     <svg className="flex-shrink-0 w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +55,7 @@ const Success = () => {
                             </div>
                         </div>
 
-                        <div className="overflow-hidden bg-gradient-to-r from-pink-500 to-yellow-500 border  rounded-lg shadow-lg">
+                        <div className="overflow-hidden bg-orange-600 border  rounded-lg shadow-lg">
                             <div className="px-4 py-6">
                                 <div className="flex items-start">
                                     <svg className="flex-shrink-0 w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,7 +98,7 @@ const Success = () => {
                         <div>
                             <h2 className="text-3xl font-bold leading-tight text-orange-600 sm:text-4xl lg:text-5xl lg:leading-tight" data-aos="zoom-in-left" data-aos-duration="3000">Best Mobile Phones Under Budget.</h2>
                             <p className="mt-6 text-justify text-lg leading-relaxed text-gray-600" data-aos="zoom-in-left" data-aos-duration="2500">Buying a smartphone is always a headache. The midrange segment is not heated up as the budget segments. However, you have to choose the best one from the small pool of midrange smartphones.</p>
-                            <Link to={'/'} title="" className="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 rounded-md mt-9 bg-gradient-to-r from-pink-500 to-yellow-500 hover:opacity-80 focus:opacity-80" role="button" data-aos="zoom-in" data-aos-duration="3000"> Explore more </Link>
+                            <Link to={'/'} title="" className="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 rounded-md mt-9 bg-orange-600 hover:opacity-80 focus:opacity-80" role="button" data-aos="zoom-in" data-aos-duration="3000"> Explore more </Link>
                         </div>
                     </div>
                 </div>

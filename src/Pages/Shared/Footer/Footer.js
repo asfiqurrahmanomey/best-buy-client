@@ -10,8 +10,8 @@ const Footer = () => {
                     <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
                         <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
                             <div className='flex align-middle items-center '>
-                            <img className="w-auto h-9" src={Logo} alt="" />
-                            <p className='text-lg font-bold ml-2 text-orange-600'>Best Buy</p>
+                                <img className="w-auto h-9" src={Logo} alt="" />
+                                <p className='text-lg font-bold ml-2 text-orange-600'>Best Buy</p>
                             </div>
 
                             <p className="text-base leading-relaxed text-gray-600 mt-7">Unbeatable price, and it’s super comfortable.</p>
@@ -70,7 +70,7 @@ const Footer = () => {
                                 </li>
 
                                 <li>
-                                    <Link to={'/'} title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Products </Link>
+                                    <Link to={'/products'} title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Products </Link>
                                 </li>
 
                                 <li>
@@ -113,8 +113,21 @@ const Footer = () => {
                                     <label for="email" className="sr-only">Email</label>
                                     <input type="email" name="email" id="email" placeholder="Enter your email" className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
                                 </div>
+                                {/* The button to open modal */}
+                                <label htmlFor="my-modal" className="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-orange-600 rounded-md hover:bg-orange-700 focus:bg-blue-700">Subscribe</label>
 
-                                <button type="submit" className="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-orange-600 rounded-md hover:bg-orange-700 focus:bg-blue-700">Subscribe</button>
+                                {/* Put this part before </body> tag */}
+                                <input type="checkbox" id="my-modal" className="modal-toggle" />
+                                <div className="modal">
+                                    <div className="modal-box">
+                                        <h3 className="font-bold text-lg">Congratulations!</h3>
+                                        <p className="py-4">Get our all offer updates</p>
+                                        <div className="modal-action">
+                                            <label htmlFor="my-modal" className="btn">Yas!</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </form>
                         </div>
                     </div>
