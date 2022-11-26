@@ -111,7 +111,7 @@ const Footer = () => {
                             <form action="#" method="POST" className="mt-6">
                                 <div>
                                     <label for="email" className="sr-only">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="Enter your email" className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" />
+                                    <input type="email" name="email" id="email" placeholder="Enter your email" className="block w-full p-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600" required/>
                                 </div>
                                 {/* The button to open modal */}
                                 <label htmlFor="my-modal" className="inline-flex items-center justify-center px-6 py-4 mt-3 font-semibold text-white transition-all duration-200 bg-orange-600 rounded-md hover:bg-orange-700 focus:bg-blue-700">Subscribe</label>
@@ -121,9 +121,9 @@ const Footer = () => {
                                 <div className="modal">
                                     <div className="modal-box">
                                         <h3 className="font-bold text-lg">Congratulations!</h3>
-                                        <p className="py-4">Get our all offer updates</p>
+                                        <p className="py-4">Get all our offer updates</p>
                                         <div className="modal-action">
-                                            <label htmlFor="my-modal" className="btn">Yas!</label>
+                                            <label htmlFor="my-modal" className="btn btn-ghost">Yes!</label>
                                         </div>
                                     </div>
                                 </div>

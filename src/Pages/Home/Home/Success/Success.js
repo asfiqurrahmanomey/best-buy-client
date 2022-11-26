@@ -8,7 +8,7 @@ const Success = () => {
             <section className="py-10 sm:py-16 lg:py-24 ">
                 <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="text-center">
-                        <h4 className="text-6xl font-bold text-gray-600" data-aos="zoom-in" data-aos-duration="3000">Numbers tell the hard works <br /> we’ve done in last 6 years</h4>
+                        <h4 className="text-lg lg:text-6xl md:text-5xl font-bold text-gray-600" data-aos="zoom-in" data-aos-duration="3000">Numbers tell the hard works <br /> we’ve done in last 6 years</h4>
                     </div>
 
                     <div className="grid grid-cols-1 gap-6 px-6 mt-8 sm:px-0 lg:mt-16 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-12" data-aos="fade-up"
@@ -49,7 +49,7 @@ const Success = () => {
                                     </svg>
                                     <div className="ml-4">
                                         <h4 className="text-4xl font-bold text-white">3,274</h4>
-                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">Projects delivered</p>
+                                        <p className="mt-1.5 text-lg font-medium leading-tight text-white">Products delivered</p>
                                     </div>
                                 </div>
                             </div>

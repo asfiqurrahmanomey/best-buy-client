@@ -77,7 +77,7 @@ const Navbar = () => {
                         </ul>
                     </motion.div>
 
-                    <div className="lg:hidden">
+                    <div className="lg:hidden z-40">
                         <button
                             aria-label="Open Menu"
                             title="Open Menu"

@@ -1,9 +1,8 @@
 import React from 'react';
-import { HiOutlineLocationMarker } from "react-icons/hi";
+import { HiOutlineLocationMarker, HiCheckCircle } from "react-icons/hi";
 
 const ProductsCard = ({ products }) => {
-    const { _id, title, seller, published_date, rating, image_url, current_price, selling_price, location, used } = products;
-    console.log(products);
+    const { _id, title, seller, published_date, rating, name, image_url, current_price, selling_price, location, used } = products;
     return (
         <div>
             <div className="">
@@ -17,11 +16,9 @@ const ProductsCard = ({ products }) => {
                             </div>
                             <div className="bg-white">
                                 <div className="flex items-center justify-between px-4 pt-4">
-                                    <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-bookmark" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                            <path d="M9 4h6a2 2 0 0 1 2 2v14l-5-3l-5 3v-14a2 2 0 0 1 2 -2" />
-                                        </svg>
+                                    <div className='flex'>
+                                    <HiCheckCircle className='text-blue-500'></HiCheckCircle>
+                                        <p className='text-sm ml-2 font-semibold text-indigo-700'>{seller?.name}</p>
                                     </div>
                                     <div className="bg-yellow-200 py-1.5 px-6 rounded-full">
                                         <p className="text-xs text-yellow-500">Featured</p>
@@ -31,14 +28,14 @@ const ProductsCard = ({ products }) => {
                                     <div className="flex items-center">
                                         <h2 className="text-lg font-semibold">{title}</h2>
                                     </div>
-                                    <p className="text-xs text-gray-600 mt-2">Current Price: ${current_price}</p>
-                                    <p className="text-orange-600 mt-2 text-sm font-semibold">Selling Price: ${selling_price}</p>
+                                    <p className="text-xs text-gray-600 mt-2">Current Price: ৳{current_price}</p>
+                                    <p className="text-orange-600 mt-2 text-sm font-semibold">Selling Price: ৳{selling_price}</p>
                                     <div className="flex justify-between mt-4">
                                         <div>
                                             <p className="text-xs text-gray-600 px-2 shadow-md rounded-lg bg-gray-200 py-1">Used: {used}</p>
                                         </div>
                                         <div className="pl-2">
-                                            <button className="text-sm font-bold rounded-lg shadow-md text-orange-600 p-4 bg-gray-200 py-1">Book Now</button>
+                                            <button className="text-sm font-bold rounded-lg shadow-md text-orange-600 hover:bg-gray-700 hover:text-white p-4 bg-gray-200 py-1">Book Now</button>
                                         </div>
                                     </div>
                                     <div className="flex items-center justify-between py-4">
