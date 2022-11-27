@@ -4,7 +4,7 @@ import SideCategory from './SideCategory/SideCategory';
 import ProductsCard from './ProductCard/ProductsCard';
 import BookingModal from './ProductCard/BookingModal/BookingModal';
 
-const Products = () => {
+const Products = ({categories}) => {
     // * useLoader for map the data * //
     const allProducts = useLoaderData();
     // * for booking modal * //
@@ -38,6 +38,8 @@ const Products = () => {
                     booking &&
                     <BookingModal
                         booking={booking}
+                        categories={categories}
+                        setBooking={setBooking}
                     ></BookingModal>
                 }
             </section >

@@ -5,10 +5,10 @@ import ProductsCard from '../ProductCard/ProductsCard';
 import SideCategory from '../SideCategory/SideCategory';
 
 
-const SingleCategory = () => {
+const SingleCategory = ({categories}) => {
     const allProducts = useLoaderData();
-        // * for booking modal * //
-        const [booking, setBooking] = useState(null);
+    // * for booking modal * //
+    const [booking, setBooking] = useState(null);
     return (
         <div>
             <section className='container mx-auto'>
@@ -36,7 +36,9 @@ const SingleCategory = () => {
                 {
                     booking &&
                     <BookingModal
+                        categories={categories}
                         booking={booking}
+                        setBooking={setBooking}
                     ></BookingModal>
                 }
             </section >
