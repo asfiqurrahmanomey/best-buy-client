@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import BookingModal from '../ProductCard/BookingModal/BookingModal';
 import ProductsCard from '../ProductCard/ProductsCard';
 import SideCategory from '../SideCategory/SideCategory';
 
 
-const AllCategory = () => {
+const SingleCategory = () => {
     const allProducts = useLoaderData();
+        // * for booking modal * //
+        const [booking, setBooking] = useState(null);
     return (
         <div>
             <section className='container mx-auto'>
@@ -23,16 +26,22 @@ const AllCategory = () => {
                                 allProducts.map(products => <ProductsCard
                                     key={products._id}
                                     products={products}
+                                    setBooking={setBooking}
                                 >
                                 </ProductsCard>)
                             }
                         </div>
                     </div>
                 </div>
-
+                {
+                    booking &&
+                    <BookingModal
+                        booking={booking}
+                    ></BookingModal>
+                }
             </section >
         </div >
     );
 };
 
-export default AllCategory;
+export default SingleCategory;

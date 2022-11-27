@@ -3,7 +3,7 @@ import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home/Home";
 import Products from "../../Pages/Product/Products";
-import AllCategory from "../../Pages/Product/AllCategory/AllCategory";
+import SingleCategory from "../../Pages/Product/SingleCategory/SingleCategory";
 
 
 
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                element: <AllCategory></AllCategory>,
+                element: <SingleCategory></SingleCategory>,
                 loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`)
             }
         ]

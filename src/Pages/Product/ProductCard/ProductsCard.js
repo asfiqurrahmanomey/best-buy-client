@@ -1,7 +1,7 @@
 import React from 'react';
 import { HiOutlineLocationMarker, HiCheckCircle } from "react-icons/hi";
 
-const ProductsCard = ({ products }) => {
+const ProductsCard = ({ products, setBooking }) => {
     const { _id, title, seller, published_date, rating, name, image_url, current_price, selling_price, location, used } = products;
     return (
         <div>
@@ -12,12 +12,12 @@ const ProductsCard = ({ products }) => {
                         {/* Card 1 */}
                         <div className="mx-4 w-72 lg:mb-0 mb-8 shadow-md" data-aos-duration="3000" data-aos="zoom-in-up">
                             <div>
-                                <img src={image_url} className="w-full h-44" alt=''/>
+                                <img src={image_url} className="w-full h-44" alt='' />
                             </div>
                             <div className="bg-white">
                                 <div className="flex items-center justify-between px-4 pt-4">
                                     <div className='flex'>
-                                    <HiCheckCircle className='text-blue-500'></HiCheckCircle>
+                                        <HiCheckCircle className='text-blue-500'></HiCheckCircle>
                                         <p className='text-sm ml-2 font-semibold text-indigo-700'>{seller?.name}</p>
                                     </div>
                                     <div className="bg-yellow-200 py-1.5 px-6 rounded-full">
@@ -35,7 +35,10 @@ const ProductsCard = ({ products }) => {
                                             <p className="text-xs text-gray-600 px-2 shadow-md rounded-lg bg-gray-200 py-1">Used: {used}</p>
                                         </div>
                                         <div className="pl-2">
-                                            <button className="text-sm font-bold rounded-lg shadow-md text-orange-600 hover:bg-gray-700 hover:text-white p-4 bg-gray-200 py-1">Book Now</button>
+                                            <label onClick={() => setBooking(products)}
+                                            htmlFor="booking-modal" 
+                                            className="text-sm font-bold rounded-lg shadow-md text-orange-600 hover:bg-gray-700 hover:text-white p-4 bg-gray-200 py-1"
+                                            >Book Now</label>
                                         </div>
                                     </div>
                                     <div className="flex items-center justify-between py-4">

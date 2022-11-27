@@ -48,7 +48,7 @@ const Testimonial = () => {
                             </svg>
                             <p className=" text-gray-600 text-base leading-4 font-normal">5/5</p>
                         </div>
-                        <h3 className="text-gray-800 my-4 font-semibold lg:text-2xl text-xl lg:leading-6 leading-5">Based On 170 reviews</h3>
+                        <h3 className="text-gray-800 my-4 font-semibold lg:text-2xl text-xl lg:leading-6 leading-5">Based On 3000+ reviews</h3>
                     </div>
 
                     {/* <!-- Medium and large Slider --> */}
