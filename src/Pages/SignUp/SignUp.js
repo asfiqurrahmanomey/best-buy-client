@@ -1,26 +1,37 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import SideItem from './SideComponent/SideItem';
 
 const SignUp = () => {
     // * Hook Form * //
     const { handleSubmit, register, formState: { errors } } = useForm();
-     // * Signup User from AuthContext* //
-    const { createUser } = useContext(AuthContext)
-    
+    // * Signup User from AuthContext* //
+    const { createUser, updateUser } = useContext(AuthContext);
+    // * Error * //
+    const [signUpError, setSignUpError] = useState('');
     const handleSignUp = (data) => {
         console.log(data);
+        setSignUpError('');
         // * Signup User * //
         createUser(data.email, data.password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
                 toast('User Created Successfully')
+                const userInfo = {
+                    displayName: data.name
+                }
+                updateUser(userInfo)
+                    .then(() => { })
+                    .catch(err => console.log(err));
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error)
+                setSignUpError(error.message)
+            });
     }
 
     return (
@@ -110,7 +121,17 @@ const SignUp = () => {
                                 </div>
 
                                 <input type="submit" className='my-4 inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md bg-gray-700 focus:outline-none hover:opacity-80 focus:opacity-80' />
+                                <div>
 
+                                    {signUpError &&
+                                        <span className='alert alert-error shadow-lg text-white'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="text-red-700 stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            {signUpError}
+                                        </span>}
+
+                                </div>
                             </form>
 
                             <div className="mt-3 space-y-3" data-aos="fade-left" data-aos-duration="2000">

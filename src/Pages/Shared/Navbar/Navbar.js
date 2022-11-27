@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../../assets/logo/logo.png'
-import { motion } from "framer-motion"
-const Navbar = () => {
-    // Animation for
-    const variants = {
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-    }
+import { AuthContext } from '../../../contexts/AuthProvider';
 
+
+const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    // * Logout Method * //
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.log(err));
+    }
+    // * Menu toggle * //
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     // *  Menuitems * //
     const navItems = <React.Fragment>
@@ -42,23 +46,47 @@ const Navbar = () => {
                 Blog
             </Link>
         </li>
-        <li>
-            <Link
-                to={'/login'}
-                aria-label="About us"
-                title="About us"
-                className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
-            >
-                Login
-            </Link>
-        </li>
+        {user?.uid ?
+            <>
+                <li>
+                    <Link
+                        to={'/dashboard'}
+                        aria-label="About us"
+                        title="About us"
+                        className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                    >
+                        Dashboard
+                    </Link>
+                </li>
+                <li>
+                    <button
+                        onClick={handleLogOut}
+                        aria-label="About us"
+                        title="About us"
+                        className="px-6 py-1.5 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                    >
+                        Signout
+                    </button>
+                </li>
+            </>
+            :
+            <li>
+                <Link
+                    to={'/login'}
+                    aria-label="About us"
+                    title="About us"
+                    className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                >
+                    Login
+                </Link>
+            </li>}
     </React.Fragment>
 
     return (
         <div className='bg-gray-50'>
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
-                    <motion.div >
+                    <div>
                         <Link
                             to={'/'}
                             aria-label="Company"
@@ -70,12 +98,12 @@ const Navbar = () => {
                                 Best Buy
                             </span>
                         </Link>
-                    </motion.div>
-                    <motion.div >
+                    </div>
+                    <div>
                         <ul className="flex items-center hidden space-x-8 lg:flex">
                             {navItems}
                         </ul>
-                    </motion.div>
+                    </div>
 
                     <div className="lg:hidden z-40">
                         <button
