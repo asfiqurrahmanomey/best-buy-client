@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import SideCategory from './SideCategory/SideCategory';
-import ProductsCard from './ProductCard/ProductsCard';
-import BookingModal from './ProductCard/BookingModal/BookingModal';
+import BookingModal from '../../ProductCard/BookingModal/BookingModal';
+import SideCategory from '../../SideCategory/SideCategory';
+import Category3Card from './Category3Card';
 
-const Products = ({ categories,products}) => {
+const Category3 = ({ categories }) => {
     // * useLoader for map the data * //
-    const allProducts = useLoaderData();
+    const category3Products = useLoaderData()
     // * for booking modal * //
     const [booking, setBooking] = useState(null);
-
-
     return (
         <div>
             <section className='container mx-auto'>
@@ -22,15 +20,15 @@ const Products = ({ categories,products}) => {
                         <SideCategory></SideCategory>
                     </div>
                     <div className='mx-auto'>
-                        <h1 data-aos="zoom-in-right" data-aos-duration="3000" className='text-xl font-bold text-gray-700 mt-4 ml-4'>Total Products: {allProducts.length}</h1>
+                        <h1 data-aos="zoom-in-right" data-aos-duration="3000" className='text-xl font-bold text-gray-700 mt-4 ml-4'>Total Products: {category3Products.length}</h1>
                         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto' >
                             {
-                                allProducts.map(products => <ProductsCard
-                                    key={products._id}
-                                    products={products}
+                                category3Products.map(category3 => <Category3Card
+                                    key={category3._id}
+                                    category3={category3}
                                     setBooking={setBooking}
                                 >
-                                </ProductsCard>)
+                                </Category3Card>)
                             }
                         </div>
                     </div>
@@ -39,15 +37,13 @@ const Products = ({ categories,products}) => {
                     booking &&
                     <BookingModal
                         booking={booking}
-                        products={products}
                         categories={categories}
                         setBooking={setBooking}
                     ></BookingModal>
                 }
             </section >
-
-        </div >
+        </div>
     );
 };
 
-export default Products;
+export default Category3;
