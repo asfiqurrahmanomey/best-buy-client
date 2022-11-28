@@ -4,6 +4,43 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## Github Client Repo Link
+
+Github Repo [Github_private_repo](https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-asfiqurrahmanomey).
+
+## Github Server Repo Link
+
+Github Repo [Github_private_repo](https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-asfiqurrahmanomey).
+
+
+## CSS Framework
+
+Tailwind CSS 
+
+## Tailwind Component Library
+
+DaisyUI & Meraki UI Component Library
+
+## React Tostify
+
+React Tostify [TOSTIFY_SETUP](https://openapi.programming-hero.com/api/quiz/1).
+
+## react Scroll to Top
+react scroll to top [TOSTIFY_SETUP](https://www.npmjs.com/package/react-scroll-to-top).
+
+## Project Description
+
+**Note: this is the main step !**
+
+1: Make a header globally and set the path.
+2.Add the Product inside the home using the API from MongoDB.
+3.Load The Category Data From MongoDB.
+4.Show the Data category wise.
+5.Added add products through the API Dynamically Using API from Mongo Data Base.
+6.Login and Sign Up Setup using FireBase.
+7.Added The Static and the blog section.
+8.Added Service Add page and other.
+
 In the project directory, you can run:
 
 ### `npm start`
