@@ -1,15 +1,24 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
-import {useQuery} from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
 
 const MyBooking = () => {
     const { user } = useContext(AuthContext);
 
-    const uri = `http://localhost:5000/bookings?email=${user?.email}`;
-// * Tan Query * //
-    const {} = useQuery({
-queryKey: ['booking', user?.email],
+    const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    // * Tan Query * //
+    const { data: bookings = [] } = useQuery({
+        queryKey: ['booking', user?.email],
+        queryFn: async () => {
+            const res = await fetch(url, {
+                headers: {
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
+            const data = await res.json();
+            return data;
+        }
 
     })
 
@@ -22,32 +31,24 @@ queryKey: ['booking', user?.email],
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Phone</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Location</th>
                         </tr>
                     </thead>
                     <tbody>
-
-                        <tr>
-                            <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>Blue</td>
-                        </tr>
-
-                        <tr className="hover">
-                            <th>2</th>
-                            <td>Hart Hagerty</td>
-                            <td>Desktop Support Technician</td>
-                            <td>Purple</td>
-                        </tr>
-
-                        <tr>
-                            <th>3</th>
-                            <td>Brice Swyre</td>
-                            <td>Tax Accountant</td>
-                            <td>Red</td>
-                        </tr>
+                        {
+                            bookings.map((booking, i) => 
+                            <tr key={booking._id}>
+                                <th>{i+1}</th>
+                                <td>{booking.name}</td>
+                                <td>{booking.phone}</td>
+                                <td>{booking.title}</td>
+                                <td>৳{booking.selling_price}</td>
+                                <td>{booking.meetLocation}</td>
+                            </tr>)
+                        }
                     </tbody>
                 </table>
             </div>
