@@ -12,6 +12,7 @@ import Category1 from "../../Pages/Product/CategoryProducts/Category1/Category1"
 import Category2 from "../../Pages/Product/CategoryProducts/Category2/Category2"
 import Category3 from "../../Pages/Product/CategoryProducts/Category3/Category3"
 import DashboardLayout from "../../Layout/DashboardLayout";
+import MyBooking from "../../Pages/Dashaboard/MyBooking/MyBooking";
 
 
 
@@ -71,7 +72,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <MyBooking></MyBooking>
             }
 
         ]

@@ -4,7 +4,7 @@ import SideCategory from './SideCategory/SideCategory';
 import ProductsCard from './ProductCard/ProductsCard';
 import BookingModal from './ProductCard/BookingModal/BookingModal';
 
-const Products = ({ categories,products}) => {
+const Products = ({ categories, products }) => {
     // * useLoader for map the data * //
     const allProducts = useLoaderData();
     // * for booking modal * //
