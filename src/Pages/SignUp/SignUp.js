@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
+import toast, { useToaster } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import useToken from '../../Hooks/useToken';
 import SideItem from './SideComponent/SideItem';
 
 const SignUp = () => {
@@ -12,7 +13,14 @@ const SignUp = () => {
     const { createUser, updateUser } = useContext(AuthContext);
     // * Error * //
     const [signUpError, setSignUpError] = useState('');
+
+    const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const [token] = useToken(createdUserEmail);
     const navigate = useNavigate();
+
+    if (token) {
+        navigate('/');
+    }
 
     const handleSignUp = (data) => {
         setSignUpError('');
@@ -23,11 +31,12 @@ const SignUp = () => {
                 console.log(user);
                 toast('User Created Successfully')
                 const userInfo = {
-                    displayName: data.name
+                    displayName: data.name,
+                    category: data.category
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveUser(data.name, data.email);
+                        saveUser(data.name, data.email, data.category);
 
                     })
                     .catch(err => console.log(err));
@@ -38,8 +47,8 @@ const SignUp = () => {
             });
     }
     // Save user to Db
-    const saveUser = (name, email) => {
-        const user = { name, email };
+    const saveUser = (name, email, category) => {
+        const user = { name, email, category };
         fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
@@ -49,21 +58,11 @@ const SignUp = () => {
         })
             .then(res => res.json())
             .then(data => {
-                getUserToken(email);
+                setCreatedUserEmail(email);
 
             })
     }
 
-    const getUserToken = email => {
-        fetch(`http://localhost:5000/jwt?email=${email}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data.accessToken) {
-                    localStorage.setItem('accessToken', data.accessToken);
-                    navigate('/');
-                }
-            })
-    }
 
     return (
         <div>

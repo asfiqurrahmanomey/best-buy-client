@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Link } from "react-router-dom";
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Dashboard from "../../Pages/Dashaboard/Dashaboard/Dashboard";
@@ -13,6 +13,11 @@ import Category2 from "../../Pages/Product/CategoryProducts/Category2/Category2"
 import Category3 from "../../Pages/Product/CategoryProducts/Category3/Category3"
 import DashboardLayout from "../../Layout/DashboardLayout";
 import MyBooking from "../../Pages/Dashaboard/MyBooking/MyBooking";
+import AllUsers from "../../Pages/Dashaboard/AllUsers/AllUsers";
+import AllSeller from "../../Pages/Dashaboard/AllSeller/AllSeller";
+import AddProducts from "../../Pages/Dashaboard/AddProducts/AddProducts";
+import ErrorPage from "../../Pages/ErrorPage";
+import AddedProducts from "../../Pages/Product/AddedProducts/AddedProducts";
 
 
 
@@ -58,6 +63,11 @@ const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/category3')
             },
             {
+                path: '/addProducts',
+                element: <AddedProducts></AddedProducts>,
+                loader: () => fetch('http://localhost:5000/addProducts')
+            },
+            {
                 path: '/productCategory/:id',
                 element: <SingleCategory></SingleCategory>,
                 loader: ({ params }) => fetch(`http://localhost:5000/productCategory/${params.id}`)
@@ -73,9 +83,24 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <MyBooking></MyBooking>
-            }
-
+            },
+            {
+                path: '/dashboard/allusers',
+                element: <AllUsers></AllUsers>
+            },
+            {
+                path: '/dashboard/allseller',
+                element: <AllSeller></AllSeller>
+            },
+            {
+                path: '/dashboard/addProduct',
+                element: <AddProducts></AddProducts>
+            },
         ]
+    },
+    {
+        path: '*',
+        element: <ErrorPage></ErrorPage>
     }
 
 ]);

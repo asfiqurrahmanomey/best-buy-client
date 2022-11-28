@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import { useQuery } from '@tanstack/react-query'
 
@@ -25,10 +24,11 @@ const MyBooking = () => {
     return (
         <div>
             <div className="overflow-x-auto mt-6">
+                <h2 className='mb-2 text-orange-600 font-bold'>My Order</h2>
                 <table className="table w-full">
 
                     <thead>
-                        <tr>
+                        <tr className=''>
                             <th></th>
                             <th>Name</th>
                             <th>Phone</th>

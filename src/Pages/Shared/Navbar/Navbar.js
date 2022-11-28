@@ -59,6 +59,16 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li>
+                    <Link
+                        to={'/dashboard/addProduct'}
+                        aria-label="About us"
+                        title="About us"
+                        className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                    >
+                        Add A Products
+                    </Link>
+                </li>
+                <li>
                     <button
                         onClick={handleLogOut}
                         aria-label="About us"

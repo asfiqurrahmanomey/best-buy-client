@@ -10,6 +10,7 @@ const SideCategory = () => {
                 <Link className='btn btn-ghost btn-small'  to={'/category1'}>iPhone</Link>
                 <Link className='btn btn-ghost btn-small' to={'/category2'}>Samsung</Link>
                 <Link className='btn btn-ghost btn-small' to={'/category3'}>Huawei</Link>
+                <Link className='btn btn-ghost btn-small' to={'/addProducts'}>New Products</Link>
             </div>
         </div>
     );
