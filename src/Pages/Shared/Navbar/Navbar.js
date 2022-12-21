@@ -21,7 +21,7 @@ const Navbar = () => {
                 to={'/'}
                 aria-label="Our product"
                 title="Our product"
-                className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                className="px-4 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
             >
                 Home
             </Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
                 to={'/products'}
                 aria-label="Our product"
                 title="Our product"
-                className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                className="px-4 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
             >
                 Products
             </Link>
@@ -41,7 +41,7 @@ const Navbar = () => {
                 to={'/blog'}
                 aria-label="Product pricing"
                 title="Product pricing"
-                className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                className="px-4 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
             >
                 Blog
             </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
                         to={'/dashboard'}
                         aria-label="About us"
                         title="About us"
-                        className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                        className="px-4 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
                     >
                         Dashboard
                     </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
                         to={'/dashboard/addProduct'}
                         aria-label="About us"
                         title="About us"
-                        className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                        className="px-4 xl:px-4 lg:px-0 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
                     >
                         Add A Products
                     </Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
                         onClick={handleLogOut}
                         aria-label="About us"
                         title="About us"
-                        className="px-6 py-1.5 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                        className="px-4 py-1.5 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
                     >
                         Signout
                     </button>
@@ -85,7 +85,7 @@ const Navbar = () => {
                     to={'/login'}
                     aria-label="About us"
                     title="About us"
-                    className="px-6 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
+                    className="px-4 py-2 text-base font-semibold text-orange-400 transition-all duration-200 border-2 border-gray-200 rounded-md mt-9 hover:bg-gray-900 hover:text-white hover:border-gray-900 focus:bg-gray-900 focus:text-white focus:border-gray-900"
                 >
                     Login
                 </Link>

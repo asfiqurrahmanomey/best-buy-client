@@ -45,32 +45,32 @@ const router = createBrowserRouter([
             {
                 path: '/products',
                 element: <Products></Products>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://best-buy-service-server-eta.vercel.app/products')
             },
             {
                 path: '/category1',
                 element: <Category1></Category1>,
-                loader: () => fetch('http://localhost:5000/category1')
+                loader: () => fetch('https://best-buy-service-server-eta.vercel.app/category1')
             },
             {
                 path: '/category2',
                 element: <Category2></Category2>,
-                loader: () => fetch('http://localhost:5000/category2')
+                loader: () => fetch('https://best-buy-service-server-eta.vercel.app/category2')
             },
             {
                 path: '/category3',
                 element: <Category3></Category3>,
-                loader: () => fetch('http://localhost:5000/category3')
+                loader: () => fetch('https://best-buy-service-server-eta.vercel.app/category3')
             },
             {
                 path: '/addProducts',
                 element: <AddedProducts></AddedProducts>,
-                loader: () => fetch('http://localhost:5000/addProducts')
+                loader: () => fetch('https://best-buy-service-server-eta.vercel.app/addProducts')
             },
             {
                 path: '/productCategory/:id',
                 element: <SingleCategory></SingleCategory>,
-                loader: ({ params }) => fetch(`http://localhost:5000/productCategory/${params.id}`)
+                loader: ({ params }) => fetch(`https://best-buy-service-server-eta.vercel.app/productCategory/${params.id}`)
             }
         ]
     },

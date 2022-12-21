@@ -41,6 +41,10 @@ react scroll to top [TOSTIFY_SETUP](https://www.npmjs.com/package/react-scroll-t
 7.Added The Static and the blog section.
 8.Added Service Add page and other.
 
+<!-- Admin Email and PAss -->
+Email: user4@gmail.com
+Pass: 123456789Ab@
+
 In the project directory, you can run:
 
 ### `npm start`

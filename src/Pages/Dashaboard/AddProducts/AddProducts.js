@@ -32,7 +32,7 @@ const AddProducts = () => {
                 }
 
                 // Save  information
-                fetch('http://localhost:5000/addProducts', {
+                fetch('https://best-buy-service-server-eta.vercel.app/addProducts', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json',

@@ -15,7 +15,7 @@ const Products = ({ categories, products }) => {
         <div>
             <section className='container mx-auto'>
                 <div className='grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 pt-6'>
-                    <div className='grid'>
+                    <div className='grid text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 mx-auto'>
                         <h1 className='text-center mb-4 text-orange-500 font-bold drop-shadow-md' data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="1500">Products Category</h1>

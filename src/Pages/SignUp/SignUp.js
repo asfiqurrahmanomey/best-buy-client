@@ -49,7 +49,7 @@ const SignUp = () => {
     // Save user to Db
     const saveUser = (name, email, category) => {
         const user = { name, email, category };
-        fetch('http://localhost:5000/users', {
+        fetch('https://best-buy-service-server-eta.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
